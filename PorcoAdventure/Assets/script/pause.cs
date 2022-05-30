@@ -8,6 +8,7 @@ public class pause : MonoBehaviour
   [SerializeField] private AudioSource click;
   public static bool GameisPaused = false;
    public GameObject PauseMenuUI;
+   [SerializeField] private AudioSource PausedClick;
 
    void Update()
     {
@@ -31,6 +32,7 @@ public class pause : MonoBehaviour
         Time.timeScale = 1f;
         GameisPaused = false;
         AudioListener.pause = false;
+        
         //AudioSource [] audios = FindObjectsOfType<AudioSource>();
 
         //(AudioSource a in audios)
@@ -43,9 +45,10 @@ public class pause : MonoBehaviour
     public void Pause ()
     {  
         PauseMenuUI.SetActive(true);
-        Time.timeScale = 0f;
-        GameisPaused = true;
-        AudioListener.pause = true;
+        
+        Invoke("DelayPause",0.15f);
+        
+        
         //AudioSource [] audios = FindObjectsOfType<AudioSource>();
 
         //foreach (AudioSource a in audios)
@@ -65,7 +68,7 @@ public class pause : MonoBehaviour
 
      public void Restart (int target)
     {
-        Application.LoadLevel (target);
+         SceneManager.LoadScene (target);
         Time.timeScale = 1f;
         AudioListener.pause = false;
     }
@@ -74,4 +77,18 @@ public class pause : MonoBehaviour
     {
         click.Play();
     }
+
+    private void DelayPause ()
+    {
+        AudioListener.pause = true;
+        GameisPaused = true;
+        Time.timeScale = 0f;
+    }
+
+    public void pausedsoundclick ()
+    {
+        PausedClick.Play();
+    }
+    
+
 }

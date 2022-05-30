@@ -68,4 +68,10 @@ public class AdsScript : MonoBehaviour
     public void HandleUserEarnedReward (object sender, Reward args) {
         RequestRewardedVideo ();
     }
+
+    private void DelayInterstitial ()
+    {
+        
+    }
+
 }
