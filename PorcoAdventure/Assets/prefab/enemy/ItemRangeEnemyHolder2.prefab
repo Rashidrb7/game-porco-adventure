@@ -86,6 +86,7 @@ GameObject:
   - component: {fileID: 8612589126072226599}
   - component: {fileID: 2060295340128309720}
   - component: {fileID: 6601720632154405051}
+  - component: {fileID: 8890312776736874844}
   m_Layer: 9
   m_Name: rangeEnemy2
   m_TagString: Enemy2
@@ -562,6 +563,32 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!61 &8890312776736874844
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3830069238163539657}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.009355128, y: -0.5582294}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.1, y: 3.72}
+    newSize: {x: 5.1, y: 3.72}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.8257092, y: 1.3630315}
+  m_EdgeRadius: 0
 --- !u!1 &3830069238248759960
 GameObject:
   m_ObjectHideFlags: 0
